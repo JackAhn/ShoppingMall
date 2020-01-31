@@ -1,17 +1,16 @@
 package kr.hs.dgsw.shoppingmall.controller;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import kr.hs.dgsw.shoppingmall.R;
 import kr.hs.dgsw.shoppingmall.model.User;
-import kr.hs.dgsw.shoppingmall.model.UserDBHelper;
 
 import static kr.hs.dgsw.shoppingmall.controller.SelectActivity.userDBHelper;
 
@@ -40,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    finish();
                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
                     startActivity(intent);
                 }
