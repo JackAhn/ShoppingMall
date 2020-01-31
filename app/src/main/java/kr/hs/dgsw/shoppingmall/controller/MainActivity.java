@@ -40,11 +40,26 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         finish();
     }
 
+    //아이템 삭제 뒤 RecyclerView 데이터 갱신
+    //itemList.remove(position);
+    //adapter.notifyItemRemoved(position);
+    //itemAdapter.notifyDataSetChanged();
+
+    //아이템 추가 후 데이터 갱신
+    //Item item = new Item()
+    //itemList.add(item)
+    //itemAdapter.notifyItemInserted(itemList.size() - 1);
+    //itemAdapter.notifyDataSetChanged();
+
+    //아이템 변경 후 데이터 갱신
+    //Item item = new Item()
+    //(아이템 변경 소스 추가)
+    //itemList.add(item)
+    //itemAdapter.notifyItemInserted(바꾼 아이템 인덱스);
+    //itemAdapter.notifyDataSetChanged();
+
     @Override
     public void onItemClick(View v, int position) {
-        //RecyclerView 아이템 삭제
-
-
         itemAdapter.notifyDataSetChanged();
     }
 }
